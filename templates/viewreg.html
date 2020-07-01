@@ -1,0 +1,48 @@
+<!DOCTYPE html 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Pilot MEC Application</title>
+  </head>
+   <body>
+   <div class="container">
+      <div style="width:40px;max-height:40px">
+         <img align="center" src="https://www.vodafone.com/content/dam/vodcom/icons/Vod_Roundel_red%403x.png.rendition.1984.1984.png" alt="Vodafone" >
+      </div>
+   </div>
+   <div class="container">
+      <h1>Vodafone - Pilot Request Application</h1>
+   </div>
+   <div class="container">
+      <h2>View Registrations</h2>
+        <a href=/><h5>Home</h5></a>&nbsp;&nbsp;&nbsp;
+	<a href=/login><h5>Login</h5></a>&nbsp;&nbsp;&nbsp;
+	<a href=/register><h5>Register</h5></a>&nbsp;&nbsp;&nbsp;
+	<h5>View Registrations</h5>&nbsp;&nbsp;&nbsp;
+      <table width=100% class="table">
+      <thead class="table">
+      <tr>
+      <th class="table">Username</th>
+      <th width=20 class="table">Email</th>
+      <th class="table"align='left'>Registration Date</th>
+      <th class="table"align='left' width=40>Idea</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for Users in Users %}
+      <tr>
+      <td class="table">{{ Users.username }}</td>
+      <td class="table">{{ Users.email }}</td>
+      <td class="table">{{ Users.registration_date }}</td>
+      <td class="table">{{ Users.idea }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+

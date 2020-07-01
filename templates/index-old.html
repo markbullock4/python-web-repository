@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Sales Application</title>
+  </head>
+  <body>
+    <div class="container"> 
+	    <h1>Dealer Feedback Application</h1>
+	    <img src="https://www.vodafone.com/content/dam/vodcom/icons/Vod_Roundel_red%403x.png.rendition.1984.1984.png" alt="Vodafone" height=40 width=40 class="logo" align=right/>
+      <a href=/><h5>Home</h5></a>&nbsp;&nbsp;&nbsp;
+      <a href=/login><h5>Login</h5></a>&nbsp;&nbsp;&nbsp;
+      <a href=/register><h5>Register</h5></a>&nbsp;&nbsp;&nbsp;
+      <a href=/view><h5>View Feedback</h5></a>&nbsp;&nbsp;&nbsp;
+      {% if message %}
+      <p class="message">{{ message | safe }}</p>
+      {% endif %}
+      <form action="/submit" method="POST">
+        <div class="form-group">
+	<h1>Welcome...</h1></br>
+          <h3>In order to access the application you need to login or register if you have not already registered to use this service.</h3>
+      </form>
+    </div>
+  </body>
+</html>
+

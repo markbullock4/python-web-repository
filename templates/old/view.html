@@ -1,0 +1,49 @@
+<!DOCTYPE html 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Pilot MEC Application</title>
+  </head>
+   <body>
+   <div class="container">
+      <div style="width:40px;max-height:40px">
+         <img align="center" src="https://www.vodafone.com/content/dam/vodcom/icons/Vod_Roundel_red%403x.png.rendition.1984.1984.png" alt="Vodafone" >
+      </div>
+   </div>
+   <div class="container">
+      <h1>Vodafone - Pilot Request Application</h1>
+   </div>
+   <div class="container">
+      <h2>View Sales Feedback </h2>
+        <a href=/><h5>Home</h5></a>&nbsp;&nbsp;&nbsp;
+	<a href=/login><h5>Login</h5></a>&nbsp;&nbsp;&nbsp;
+	<a href=/register><h5>Register</h5></a>&nbsp;&nbsp;&nbsp;
+	<a href=/feedback><h5>Create Feedback</h5></a>&nbsp;&nbsp;&nbsp;
+	<h5>View Feedback</h5>&nbsp;&nbsp;&nbsp;
+      <table width=100% class="table">
+      <thead class="table">
+      <tr>
+      <th class="table">Customer</th>
+      <th width=20 class="table">Dealer</th>
+      <th class="table"align='left'>Rating</th>
+      <th class="table"align='left'>Comments</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for Feedback in Feedback %}
+      <tr>
+      <td class="table">{{ Feedback.customer }}</td>
+      <td class="table">{{ Feedback.dealer }}</td>
+      <td class="table">{{ Feedback.rating }}</td>
+      <td class="table">{{ Feedback.comments }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+      </table>
+    </div>
+  </body>
+</html>
+
