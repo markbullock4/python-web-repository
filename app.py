@@ -9,13 +9,12 @@ POSTGRES_ENV = 'prod'
 
 if POSTGRES_ENV == 'dev':
     app.debug = True
-    DB_URL = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user="postgres",pw="NEW-pass-1966",url="127.0.0.1",db="lexus")
+    DB_URL = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user="ENTER USER",pw="ENTER PASSWORD",url="ENTER URL",db="ENTER DATABASE")
     app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL 
 else:
     app.debug = False
-    # below line needs changing for PROD!
-    #DB_URL = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user="postgres",pw="NEW-pass-1966",url="127.0.0.1",db="lexus")
-    DB_URL = "postgres://gqthvmyynbwqxu:384b01605d6802af4f2fab446f93db1c9f55d337b23b88c69d8e35da94ed8cd0@ec2-3-231-16-122.compute-1.amazonaws.com:5432/d8c8mndalo6glb"
+    # Might need changing for PROD?
+    DB_URL = 'postgresql+psycopg2://{user}:{pw}@{url}/{db}'.format(user="ENTER USER",pw="ENTER PASSWORD",url="ENTER URL",db="ENTER DATABASE")
     app.config['SQLALCHEMY_DATABASE_URI'] = DB_URL 
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
